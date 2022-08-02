@@ -1,22 +1,19 @@
+import Button from "../Button/Button";
 import "./Card.css";
 
-function Card() {
-    const dataProduct = {
-        name: 'volkswagen gol highline',
-        precio: 23400,
-        descripcion: "Producto En Venta"
-    };
+function Card( {name, precio, imgurl, descripcion} ) {
 
 
     return ( 
     <div className="main">
         <div className="card">
             <div className="card-img">
+                <img src={imgurl} alt="imagen"></img>
                 <div className="card-detail">
-                    <h2>{dataProduct.name}</h2>
-                    <p>{dataProduct.descripcion}</p>
-                    <h3>$ {dataProduct.precio}</h3>
-                    <button>Ver Mas</button>
+                    <h2>{name}</h2>
+                    <p>{descripcion}</p>
+                    <h3>$ {precio}</h3>
+                    <Button type="alert" text="Comprar"/>
                 </div>
             </div>
         </div>

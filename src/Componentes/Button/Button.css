@@ -1,0 +1,7 @@
+.btn{
+    padding: 5px 10px;
+    color: black;
+    max-width: 150px;
+    background-color: skyblue;
+    border-radius: 5px;
+}
