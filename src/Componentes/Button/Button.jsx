@@ -5,7 +5,7 @@ function Button( {text, type} ) {
         backgroundcolor: type === "alert" ? "blue" : "green",
     };
 return (
-    <button style={btnstyle} className="btn">{text}</button>
+    <button style={btnstyle} className="btn btn-dark">{text}</button>
 );
 }
 

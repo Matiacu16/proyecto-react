@@ -12,7 +12,7 @@ function Card( {name, precio, imgurl, descripcion} ) {
                 <div className="card-detail">
                     <h2>{name}</h2>
                     <p>{descripcion}</p>
-                    <h3>$ {precio}</h3>
+                    <h3>U$D {precio}</h3>
                     <Button type="alert" text="Comprar"/>
                 </div>
             </div>

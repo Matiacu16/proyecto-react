@@ -35,10 +35,10 @@ function App() {
     
     <Card 
     
-    name="volkswagen gol highline"
-    precio={23400}
+    name="Boston Celtics"
+    precio={122}
     imgurl="https://picsum.photos/200/300"
-    descripcion="Producto En Venta" />
+    descripcion="NBA jerseys" />
     
     </div>
     
