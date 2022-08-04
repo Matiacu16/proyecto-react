@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
-function ItemCount(props){
+function ItemCount( { initial, stock} ) {
+    
+    console.log(initial, stock);
     
     const [clicks, setClicks] = useState(1);
     
@@ -15,9 +17,9 @@ function ItemCount(props){
     return(
     <>
         <h3>Añadir al carrtio</h3>
-        <button onClick={ handleDecrement }>-</button>
-        <h3>Click: {clicks}</h3>
-        <button onClick={ handleIncrement }>+</button>
+        <button disabled={clicks <= 1} onClick={ handleDecrement }>-</button>
+        <h3>Productos: {clicks}</h3>
+        <button disabled={clicks >= 5} onClick={ handleIncrement }>+</button>
     </>
     )
 }

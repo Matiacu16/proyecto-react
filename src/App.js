@@ -2,7 +2,8 @@ import './App.css';
 import NavBar from './Componentes/NavBar';
 import Card from './Componentes/Card/Card';
 import Button from './Componentes/Button/Button';
-import ItemCount from './Componentes/ItemCount';
+import ItemCount from './Componentes/ItemCount/ItemCount';
+import './data/data';
 
 function App() {
   
@@ -27,7 +28,7 @@ function App() {
     <NavBar />
     <div className="header-home"></div>
     <div>
-      <h1 ClassName="title">Tienda Spring</h1> 
+      <h1 className="title">Tienda Spring</h1> 
       <p style={styles}>{usurario}</p>
       <br />
       <Button type="info" text="Ver Más"/>
@@ -41,7 +42,7 @@ function App() {
     
     </div>
     
-    <ItemCount initial={1} stock={3}/>
+    <ItemCount initial={1} stock={5}/>
     
     </div>
   
