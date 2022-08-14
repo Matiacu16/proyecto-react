@@ -1,5 +1,13 @@
 const itemsData = [
     {
+        id: 1,
+        name: "Boston Celtics",
+        precio: 122,
+        imgurl: "https://picsum.photos/200/300",
+        descripcion: "Detalles Del Producto: Jersey de equipo NBA Boston Celtics año 2017 del Campeonato Copa Del Rey",
+        stock: 7,
+        },
+    /*{
     id: 1,
     name: "Boston Celtics",
     precio: 122,
@@ -30,7 +38,7 @@ const itemsData = [
         precio: 128,
         descripcion: "NBA jerseys",
         stock: 7,
-    },
+    },*/
 ];
 
 export default itemsData;

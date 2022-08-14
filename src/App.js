@@ -15,9 +15,9 @@ function App() {
       <h1 className="title">Tienda Spring</h1> 
       <Button type="info" text="Ver Más"/>
     
-    {/* <ItemListContainer/> */}
+    <ItemListContainer/> 
     
-    <ItemDetailContainer />
+    {/* <ItemDetailContainer /> */}
     
     <ItemCount initial={1} stock={5}/>
     </div>

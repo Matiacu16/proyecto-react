@@ -33,6 +33,7 @@ return (<div>
         name={productnba.name} 
         descripcion={productnba.descripcion} 
         precio={productnba.precio}
+        stock={productnba.stock}
         />
     );
     })}
