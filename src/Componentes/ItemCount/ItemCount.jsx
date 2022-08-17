@@ -18,7 +18,7 @@ function ItemCount( { initial, stock} ) {
     <>
         <h3>Añadir al carrtio</h3>
         <button className="btn btn-success" disabled={count <= 1} onClick={ handleDecrement }>-</button>
-        <h3>Productos: {count}</h3>
+        <h4>Productos: {count}</h4>
         <button className="btn btn-success" disabled={count >= 5} onClick={ handleIncrement }>+</button>
     </>
     )

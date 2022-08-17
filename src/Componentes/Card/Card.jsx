@@ -1,7 +1,8 @@
 import Button from "../Button/Button";
 import "./Card.css";
+import ItemCount from "../ItemCount/ItemCount";
 
-function Card( {name, precio, imgurl, descripcion, stock} ) {
+function Card( {name, precio, imgurl, descripcion, stock, id} ) {
 
     
     return ( 
@@ -13,8 +14,8 @@ function Card( {name, precio, imgurl, descripcion, stock} ) {
                     <h2>{name}</h2>
                     <p>{descripcion}</p>
                     <h3>U$D {precio}</h3>
-                    <h6>Stock: {stock}</h6>
                     <Button type="alert" text="Comprar"/>
+                    <ItemCount />
                 </div>
             </div>
         </div>

@@ -5,21 +5,20 @@ import Button from './Componentes/Button/Button';
 import ItemCount from './Componentes/ItemCount/ItemCount';
 import ItemListContainer from './Componentes/Itemlist/ItemListContainer';
 import ItemDetailContainer from'./Componentes/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   
   
   return (
     <div className="App">
+    <BrowserRouter>
     <NavBar />
-      <h1 className="title">Tienda Spring</h1> 
-      <Button type="info" text="Ver Más"/>
-    
-    <ItemListContainer/> 
-    
-    {/* <ItemDetailContainer /> */}
-    
-    <ItemCount initial={1} stock={5}/>
+    <Routes>
+        <Route path="/" element={ <ItemListContainer /> } />
+        <Route path="/detalle" element={ <ItemDetailContainer /> } /> 
+    </Routes>
+    </BrowserRouter>
     </div>
   );
 }
