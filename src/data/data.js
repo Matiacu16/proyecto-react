@@ -1,44 +1,36 @@
 const itemsData = [
     {
         id: 1,
-        name: "Boston Celtics",
+        equipo: "Boston Celtics",
         precio: 122,
-        imgurl: "https://picsum.photos/200/300",
+        img: "http://dummyimage.com/280x260.png/ff4444/ffffff",
         descripcion: "NBA jerseys",
         stock: 7,
         },
     {
     id: 2,
-    name: "Golden State Warriors",
+    equipo: "Golden State Warriors",
     precio: 134,
-    imgurl: "https://picsum.photos/200/300",
+    img: "http://dummyimage.com/280x260.png/ff4444/ffffff",
     descripcion: "NBA jerseys",
     stock: 7,
     },
-    /*{
+    {
         id: 2,
-        name: "Golden State Warriors",
-        imgurl: "https://picsum.photos/200/300",
+        equipo: "Golden State Warriors",
+        img: "http://dummyimage.com/280x260.png/ff4444/ffffff",
         precio: 134,
         descripcion: "NBA jerseys",
         stock: 7,
     },
     {
         id: 3,
-        name: "Lakers",
-        imgurl: "https://picsum.photos/200/300",
+        equipo: "Lakers",
+        img: "http://dummyimage.com/280x260.png/ff4444/ffffff",
         precio: 180,
         descripcion: "NBA jerseys",
         stock: 7,
     },
-    {
-        id: 4,
-        name: "Miami Heat",
-        imgurl: "https://picsum.photos/200/300",
-        precio: 128,
-        descripcion: "NBA jerseys",
-        stock: 7,
-    },*/
 ];
 
 export default itemsData;

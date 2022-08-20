@@ -1,44 +1,52 @@
-import React, { useEffect, useState } from "react";
-import itemsData from "../../data/data.js";
-import Card from "../Card/Card.jsx";
+import React, { useState, useEffect } from "react";
+import data from "../../data/data";
+import Card from "../Card/Card";
+import itemsData from "../../data/data";
+import { useParams } from "react-router-dom";
 
-function getProducts(){
-    return new Promise((resolve) => {
-        setTimeout(()=> resolve(itemsData), 1000);
+
+function traerProductos() {
+return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(itemsData), 1500);
+});
+}
+
+const ItemListContainer = () => {
+const [data, setdata] = useState([]);
+
+const idEquipo  = useParams().idEquipo;
+
+useEffect(() => {
+    traerProductos()
+    .then((respuesta) => {
+
+if (idEquipo === undefined) setdata(respuesta);
+let filtrados = respuesta.filter( elemento => elemento.idEquipo === idEquipo)
+        setdata(filtrados);
+})
+    .catch((error) => {
+        console.log(error);
     });
-};
+}, []);
 
 
-
-export default function ItemListContainer() {
-const [ data, setdata] = useState([]);
-
-useEffect(
-    () => {
-        getProducts().then((respuesta) => {
-            setdata(respuesta);
-        });
-    },
-    []);
-
-
-return (<div> 
-    <h1>Nuestros Productos</h1>
-    { 
-        data.map( (productnba) =>   {
+return (
+    <div className="main">
+    {data.map((productnba) => {
         return (
         <Card
-        id={productnba.id}
-        key={productnba.id}
-        imgurl={productnba.imgurl} 
-        name={productnba.name} 
-        descripcion={productnba.descripcion} 
-        precio={productnba.precio}
+            id={productnba.id}
+            title={productnba.equipo}
+            price={productnba.precio}
+            category={productnba.descripcion}
+            img={productnba.img}
+            stock={productnba.stock}
         />
-    );
+        );
     })}
-    
-</div>
+    </div>
 );
-}
+};
+
+export default ItemListContainer;
 

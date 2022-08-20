@@ -11,7 +11,7 @@ function Card(props) {
                 <img src={props.data.imgurl} alt="imagen"></img>
                 <div className="card-detail">
                     <h2>{props.data.name}</h2>
-                    <p>{props.data.descripcion}</p>
+                    <p>{props.data.category}</p>
                     <h3>U$D {props.data.precio}</h3>
                     <Button type="alert" text="Comprar"/>
                 </div>
