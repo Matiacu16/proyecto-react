@@ -2,16 +2,19 @@ import "./Card.css";
 import ItemCount from "../ItemCount/ItemCount";
 import Button from "../Button/Button";
 import { link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { cartContext } from "../../store/cartContext";
 
 function CardDetail({ id, equipo, precio, img, descripcion, stock }) {
     
     const { addToCart } = useContext(cartContext)
     
-    const quantityInCart = 0;
+    const [quantityInCart, setQuantityInCart] = useState(0);
     
     function handleAdd(quantity) {
+    
+    setQuantityInCart(quantity);
+    
     const itemToCart = {id, equipo, precio, img, descripcion, stock};
     
     addToCart(itemToCart, quantity);
