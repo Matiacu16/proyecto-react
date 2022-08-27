@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 
-function ItemCount( { initial, stock} ) {
+function ItemCount(props) {
+
+    const [count, setCount] = useState(props.initial);
     
-    console.log(initial, stock);
-    
-    const [count, setCount] = useState(1);
     
     const handleIncrement= () => {
         setCount(count + 1);
@@ -20,6 +19,7 @@ function ItemCount( { initial, stock} ) {
         <button className="btn btn-success" disabled={count <= 1} onClick={ handleDecrement }>-</button>
         <h4>Productos: {count}</h4>
         <button className="btn btn-success" disabled={count >= 5} onClick={ handleIncrement }>+</button>
+        <button onClick={()=>props.onAdd(count)}>Finalizar Compra</button>
     </>
     )
 }
