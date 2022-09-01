@@ -14,11 +14,9 @@ return (
         <table>
         <thead>
             <tr>
-            <th>Imagen</th>
             <th>Titulo</th>
             <th>Precio</th>
             <th>Cantidad</th>
-            <th>Remover</th>
             <th>Total</th>
             </tr>
         </thead>
