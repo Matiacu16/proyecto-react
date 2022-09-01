@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import dataJSON from "../../data/data";
 import CardDetail from "../Card/CardDetail";
 import { useParams } from "react-router-dom";
+import { DotSpinner } from '@uiball/loaders'
 
 function ItemDetailContainer({ itemid }) {
 const [item, setItem] = useState({});
@@ -26,6 +27,8 @@ useEffect(() => {
     .then((respuesta) => setItem(respuesta))
     .catch((error) => alert(error));
 }, []);
+
+
 
 return (
     <div className="main">

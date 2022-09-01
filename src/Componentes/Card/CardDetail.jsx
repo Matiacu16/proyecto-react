@@ -4,8 +4,10 @@ import Button from "../Button/Button";
 import { link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { cartContext } from "../../store/cartContext";
+import { DotSpinner } from '@uiball/loaders'
 
-function CardDetail({ id, equipo, precio, img, descripcion, stock }) {
+
+function CardDetail({ id, titulo, precio, img, descripcion, stock }) {
     
     const { addToCart } = useContext(cartContext)
     
@@ -15,7 +17,7 @@ function CardDetail({ id, equipo, precio, img, descripcion, stock }) {
     
     setQuantityInCart(quantity);
     
-    const itemToCart = {id, equipo, precio, img, descripcion, stock};
+    const itemToCart = {id, titulo, precio, img, descripcion, stock};
     
     addToCart(itemToCart, quantity);
     }
@@ -27,7 +29,7 @@ function CardDetail({ id, equipo, precio, img, descripcion, stock }) {
                     <img src={img} alt="imagen"></img>
                     </div>
                     <div className="card-detail">
-                        <h2>{equipo}</h2>
+                        <h2>{titulo}</h2>
                         <p>{descripcion}</p>
                         <h3>U$D {precio}</h3>
                         <h6>stock: {stock}</h6>

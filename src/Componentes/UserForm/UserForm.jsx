@@ -4,13 +4,24 @@ import "./userform.css";
 import Button from "../Button/Button";
 
 
-function UserForm () {
+function UserForm ({ cart }) {
     const [userData, setUserData] = useState({
         name: "",
         email: "",
         telefono: "",
     });
     
+
+
+
+
+
+let total = 0;
+cart.forEach((item) => {
+    total += item.price * item.quantity;
+});
+
+
     
     function handleSubmit(evt){
     evt.preventDefault();
@@ -43,7 +54,7 @@ function UserForm () {
             telefono: "",
         });
     }
-    
+
     return (
         <div className="form-container">
         <form onSubmit={ handleSubmit }>
@@ -65,13 +76,16 @@ function UserForm () {
         
         
         <div>
-        <button type="submit">enviar</button>
-        <button type="reset">Cancelar</button>
+        <Button type="submit" onTouch={handleSubmit}>
+            Finalizar Compra
+        </Button>
+        <Button type="reset">Vaciar Carrito</Button>
         </div>
         </form>
     </div>
     );
     
-}
+};
+
 
 export default UserForm;

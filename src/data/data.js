@@ -1,7 +1,7 @@
 const itemsData = [
     {
         id: 1,
-        equipo: "Boston Celtics",
+        titulo: "Boston Celtics",
         precio: 122,
         img: "http://dummyimage.com/280x260.png/ff4444/ffffff",
         descripcion: "NBA jerseys",
@@ -9,7 +9,7 @@ const itemsData = [
         },
     {
     id: 2,
-    equipo: "Golden State Warriors",
+    titulo: "Golden State Warriors",
     precio: 134,
     img: "http://dummyimage.com/280x260.png/ff4444/ffffff",
     descripcion: "NBA jerseys",
@@ -17,7 +17,7 @@ const itemsData = [
     },
     {
         id: 2,
-        equipo: "Golden State Warriors",
+        titulo: "Golden State Warriors",
         img: "http://dummyimage.com/280x260.png/ff4444/ffffff",
         precio: 134,
         descripcion: "NBA jerseys",
@@ -25,7 +25,7 @@ const itemsData = [
     },
     {
         id: 3,
-        equipo: "Lakers",
+        titulo: "Lakers",
         img: "http://dummyimage.com/280x260.png/ff4444/ffffff",
         precio: 180,
         descripcion: "NBA jerseys",

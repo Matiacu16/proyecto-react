@@ -3,7 +3,7 @@ import data from "../../data/data";
 import Card from "../Card/Card";
 import itemsData from "../../data/data";
 import { useParams } from "react-router-dom";
-
+import { DotSpinner } from '@uiball/loaders'
 
 function traerProductos() {
 return new Promise((resolve, reject) => {
@@ -29,18 +29,28 @@ let filtrados = respuesta.filter( elemento => elemento.idEquipo === idEquipo)
     });
 }, []);
 
+if (data.length === 0){
+    return <div className="main">
+<DotSpinner 
+size={80}
+speed={0.9} 
+color="black" 
+/>
+    </div>
+}
+
 
 return (
     <div className="main">
-    {data.map((productnba) => {
+    {data.map((item) => {
         return (
         <Card
-            id={productnba.id}
-            title={productnba.equipo}
-            price={productnba.precio}
-            category={productnba.descripcion}
-            img={productnba.img}
-            stock={productnba.stock}
+            id={item.id}
+            title={item.equipo}
+            price={item.precio}
+            category={item.descripcion}
+            img={item.img}
+            stock={item.stock}
         />
         );
     })}
